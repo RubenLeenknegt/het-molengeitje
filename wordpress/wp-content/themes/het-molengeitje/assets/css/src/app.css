@@ -1,1 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Prompt:wght@500;700&display=swap");
 @import "tailwindcss";
+
+@theme {
+  /* Font families */
+  --font-sans: "Lato", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Prompt", var(--font-sans);
+
+  /* Type scale (converted from px to rem) */
+  --text-h1: 4.125rem;   /* 66px */
+  --text-h1--line-height: 1.1;
+  --text-h2: 2.5625rem;  /* 41px */
+  --text-h2--line-height: 1.2;
+  --text-h3: 1.625rem;   /* 26px */
+  --text-h3--line-height: 1.3;
+  --text-p: 1rem;        /* 16px */
+  --text-p--line-height: 1.6;
+
+  /* Project colors */
+  --color-secondary: #f5b087;
+  --color-secondary-bg: #f2ebe9;
+  --color-tertiary-bg: #f5b087;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-p text-black bg-white antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-heading text-black;
+  }
+
+  h1 {
+    @apply text-h1;
+  }
+
+  h2 {
+    @apply text-h2;
+  }
+
+  h3 {
+    @apply text-h3;
+  }
+
+  p {
+    @apply text-p;
+  }
+}
