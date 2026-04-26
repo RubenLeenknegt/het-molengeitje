@@ -68,7 +68,7 @@
   }
 
   .dropdown-nav-list li a {
-    @apply font-heading text-3xl leading-tight text-black transition-colors hover:text-black/60;
+    @apply font-heading text-3xl leading-tight text-black/20 transition-colors hover:text-black;
   }
 
   .dropdown-cta-block {
