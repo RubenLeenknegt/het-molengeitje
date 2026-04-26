@@ -49,3 +49,41 @@
     @apply text-p;
   }
 }
+
+@layer components {
+  .dropdown-panel {
+    @apply invisible pointer-events-none -translate-y-2 opacity-0 transition duration-200 ease-out;
+  }
+
+  [data-dropdown-open="true"] .dropdown-panel {
+    @apply visible pointer-events-auto translate-y-0 opacity-100;
+  }
+
+  .dropdown-backdrop {
+    @apply invisible pointer-events-none z-40 opacity-0 transition duration-200 ease-out;
+  }
+
+  [data-dropdown-open="true"] .dropdown-backdrop {
+    @apply visible pointer-events-auto opacity-100;
+  }
+
+  .dropdown-nav-list li a {
+    @apply font-heading text-3xl leading-tight text-black transition-colors hover:text-black/60;
+  }
+
+  .dropdown-cta-block {
+    @apply block rounded-3xl border border-black/10 bg-white p-6 transition-colors hover:bg-black/[0.03];
+  }
+
+  .custom-logo-link {
+    @apply inline-block;
+  }
+
+  .custom-logo {
+    @apply h-12 w-auto;
+  }
+
+  body.dropdown-is-open {
+    @apply overflow-hidden;
+  }
+}
