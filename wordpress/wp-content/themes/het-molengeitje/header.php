@@ -23,7 +23,7 @@
         <div class="ml-auto flex items-center gap-4 md:gap-6">
             <p class="hidden text-sm font-semibold text-black md:block">Wil je vrijwilliger worden bij Het Molengeitje?</p>
 
-            <a href="/contact" class="btn-primary hidden md:inline-flex">
+            <a href="/contact" class="btn-primary hidden md:inline-flex text-sm">
                 Meld je aan
                 <span class="btn-arrow">
                 <?php echo file_get_contents(get_template_directory() . '/assets/media/svg/cta-arrow.svg'); ?>

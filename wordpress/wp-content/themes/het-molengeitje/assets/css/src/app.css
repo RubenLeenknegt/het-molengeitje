@@ -56,12 +56,20 @@
     @apply inline-flex items-center gap-2 bg-black text-white font-semibold px-6 py-3 rounded-full transition-colors duration-200 hover:bg-black/80;
   }
 
+  .btn-primary .btn-arrow {
+    @apply transition-transform duration-200;
+  }
+
   .btn-primary--light {
     @apply bg-white text-black hover:bg-white/90;
   }
 
-  .btn-primary .btn-arrow {
-    @apply transition-transform duration-200;
+  .btn-primary--light .btn-arrow {
+    @apply text-black;
+  }
+
+  .btn-primary--light .btn-arrow svg path {
+    @apply fill-black;
   }
 
   .btn-primary:hover .btn-arrow {
@@ -91,7 +99,7 @@
   }
 
   .dropdown-nav-list li a {
-    @apply font-heading text-3xl leading-tight text-black/20 transition-colors hover:text-black;
+    @apply font-heading text-2xl leading-2 text-black/20 transition-colors hover:text-black;
   }
 
   .custom-logo-link {
