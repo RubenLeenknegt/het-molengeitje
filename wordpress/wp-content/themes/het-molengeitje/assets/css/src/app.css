@@ -53,7 +53,7 @@
 @layer components {
 
   .btn-primary {
-    @apply inline-flex items-center gap-2 bg-black text-white font-semibold px-6 py-3 rounded-full transition-colors duration-200 hover:bg-black/80;
+    @apply inline-flex items-center gap-2 bg-black text-white font-semibold px-6 py-3 rounded-full transition-colors duration-200;
   }
 
   .btn-primary .btn-arrow {
@@ -61,7 +61,7 @@
   }
 
   .btn-primary--light {
-    @apply bg-white text-black hover:bg-white/90;
+    @apply bg-white text-black;
   }
 
   .btn-primary--light .btn-arrow {
