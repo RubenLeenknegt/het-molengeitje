@@ -23,27 +23,22 @@
         <div class="ml-auto flex items-center gap-4 md:gap-6">
             <p class="hidden text-sm font-semibold text-black md:block">Wil je vrijwilliger worden bij Het Molengeitje?</p>
 
-            <a
-                href="<?php echo esc_url(home_url('/contact')); ?>"
-                class="hidden rounded-full px-5 py-2.5 bg-black text-sm font-semibold text-white transition-colors hover:bg-black/80 md:inline-flex"
-            >
+            <a href="/contact" class="btn-primary hidden md:inline-flex">
                 Meld je aan
+                <span class="btn-arrow">
+                <?php echo file_get_contents(get_template_directory() . '/assets/media/svg/cta-arrow.svg'); ?>
+              </span>
             </a>
 
             <button
-                type="button"
-                class="inline-flex items-center gap-3 rounded-full border border-black/20 px-4 py-2 text-sm font-semibold text-black transition-colors hover:border-black"
-                data-dropdown-toggle
-                aria-controls="site-dropdown"
-                aria-expanded="false"
-                aria-label="Toggle dropdown menu"
+                    type="button"
+                    class="hamburger-btn"
+                    data-dropdown-toggle
+                    aria-controls="site-dropdown"
+                    aria-expanded="false"
+                    aria-label="Toggle dropdown menu"
             >
-                Menu
-                <span class="relative block h-3 w-4" aria-hidden="true">
-                    <span class="absolute left-0 top-0 block h-0.5 w-4 bg-black"></span>
-                    <span class="absolute left-0 top-1.5 block h-0.5 w-4 bg-black"></span>
-                    <span class="absolute left-0 top-3 block h-0.5 w-4 bg-black"></span>
-                </span>
+                <span class="hamburger-icon" aria-hidden="true"></span>
             </button>
         </div>
     </div>

@@ -21,19 +21,27 @@ $primary_menu_exists = has_nav_menu('primary');
                 endif; ?>
         </div>
 
-        <div class="flex flex-col gap-4">
-            <a href="<?php echo esc_url(home_url('/aanmelden')); ?>" class="dropdown-cta-block">
-                <p class="text-sm font-semibold uppercase tracking-[0.14em] text-black/60">CTA 01</p>
-                <p class="mt-2 font-heading text-2xl text-black">Aanmelden voor dagbesteding</p>
-                <p class="mt-2 text-sm text-black/70">We denken met je mee over een passende plek.</p>
-            </a>
+        <div class="hidden md:flex flex-col items-start gap-2.5">
+            <div class="flex items-center justify-between gap-4 w-96 h-26 rounded-3xl border bg-secondary border-black/10 p-8 transition-colors bg-[--color-secondary]">
+                <div class="leading-tight">
+                    <h3 class="text-xl text-black">Ontdek</h3>
+                    <h3 class="text-xl leading-2 text-white">Het molengeitje</h3>
+                </div>
+                <a href="/contact" class="btn-primary hidden md:inline-flex">
+                    <span class="btn-arrow">
+                        <?php echo file_get_contents(get_template_directory() . '/assets/media/svg/cta-arrow.svg'); ?>
+                    </span>
+                </a>
+            </div>
 
-            <a href="<?php echo esc_url(home_url('/steunen')); ?>" class="dropdown-cta-block">
-                <p class="text-sm font-semibold uppercase tracking-[0.14em] text-black/60">CTA 02</p>
-                <p class="mt-2 font-heading text-2xl text-black">Steun Het Molengeitje</p>
-                <p class="mt-2 text-sm text-black/70">Help ons groeien met een bijdrage of samenwerking.</p>
-            </a>
+            <div class="flex items-center justify-between gap-4 w-96 h-26 rounded-3xl border border-black/10 p-8 transition-colors bg-black text-white">
+                <h3 class="text-xl font-heading text-white">Routeplanner</h3>
+                <a href="/contact" class="btn-primary hidden md:inline-flex">
+                    <span class="btn-arrow">
+                        <?php echo file_get_contents(get_template_directory() . '/assets/media/svg/cta-arrow.svg'); ?>
+                    </span>
+                </a>
+            </div>
         </div>
     </div>
 </div>
-
