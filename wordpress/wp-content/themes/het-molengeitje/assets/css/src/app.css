@@ -49,3 +49,120 @@
     @apply text-p;
   }
 }
+
+@layer components {
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-black text-white font-semibold px-6 py-3 rounded-full transition-colors duration-200;
+  }
+
+  .btn-primary .btn-arrow {
+    @apply transition-transform duration-200;
+  }
+
+  .btn-primary--light {
+    @apply bg-white text-black;
+  }
+
+  .btn-primary--light .btn-arrow {
+    @apply text-black;
+  }
+
+  .btn-primary--light .btn-arrow svg path {
+    @apply fill-black;
+  }
+
+  .btn-primary:hover .btn-arrow {
+    @apply translate-x-1;
+  }
+
+  .dropdown-panel {
+    @apply invisible pointer-events-none -translate-y-2 opacity-0 transition duration-200 ease-out;
+  }
+
+  @media (max-width: 767px) {
+    .dropdown-panel {
+      min-height: calc(100dvh - 80px);
+    }
+  }
+
+  [data-dropdown-open="true"] .dropdown-panel {
+    @apply visible pointer-events-auto translate-y-0 opacity-100;
+  }
+
+  .dropdown-backdrop {
+    @apply invisible pointer-events-none z-40 opacity-0 transition duration-200 ease-out;
+  }
+
+  [data-dropdown-open="true"] .dropdown-backdrop {
+    @apply visible pointer-events-auto opacity-100;
+  }
+
+  .dropdown-nav-list li a {
+    @apply font-heading text-2xl leading-2 text-black/20 transition-colors hover:text-black;
+  }
+
+  .custom-logo-link {
+    @apply inline-block;
+  }
+
+  .custom-logo {
+    @apply h-12 w-auto;
+  }
+
+  body.dropdown-is-open {
+    @apply overflow-hidden;
+  }
+
+  /* Hamburger button */
+  .hamburger-btn {
+    width: 44px;
+    height: 44px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .hamburger-icon {
+    position: relative;
+    width: 22px;
+    height: 2px;
+    background: black;
+    border-radius: 2px;
+    transition: background 0.25s ease;
+  }
+
+  .hamburger-icon::before,
+  .hamburger-icon::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: black;
+    border-radius: 2px;
+    transition: transform 0.25s ease, top 0.25s ease, bottom 0.25s ease;
+  }
+
+  .hamburger-icon::before { top: -7px; }
+  .hamburger-icon::after  { bottom: -7px; }
+
+  /* Open state — driven by aria-expanded on the button itself */
+  .hamburger-btn[aria-expanded="true"] .hamburger-icon {
+    background: transparent;
+  }
+
+  .hamburger-btn[aria-expanded="true"] .hamburger-icon::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  .hamburger-btn[aria-expanded="true"] .hamburger-icon::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+  }
+}
