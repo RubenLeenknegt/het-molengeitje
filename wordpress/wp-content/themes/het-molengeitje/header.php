@@ -9,7 +9,7 @@
 <?php wp_body_open(); ?>
 
 <header class="relative z-50 bg-white" data-dropdown-root data-dropdown-open="false">
-    <div class="mx-auto flex w-full max-w-[1440px] items-center justify-between gap-6 px-6 py-4 sm:px-10 md:px-14 lg:px-20">
+    <div class="mx-auto flex w-full max-w-[1440px] items-center justify-between gap-6 px-6 py-4 sm:px-10 md:px-14 lg:px-8">
         <div class="shrink-0">
             <?php if (has_custom_logo()) : ?>
                 <?php the_custom_logo(); ?>
@@ -32,7 +32,7 @@
 
             <button
                     type="button"
-                    class="hamburger-btn"
+                    class="hamburger-btn ml-20"
                     data-dropdown-toggle
                     aria-controls="site-dropdown"
                     aria-expanded="false"
