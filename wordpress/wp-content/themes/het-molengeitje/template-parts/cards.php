@@ -26,9 +26,9 @@ $right_bg_image     = $cards['right_card_background_image'] ?? null;
 $right_bg_url       = $right_bg_image['url'] ?? '';
 ?>
 
-<section class="px-6 py-12 sm:px-10 md:px-14 lg:px-20">
-    <div class="mx-auto grid w-full max-w-6xl grid-cols-1 justify-items-center gap-6 md:grid-cols-3 md:gap-8">
-        <article class="flex min-h-96 w-full max-w-md flex-col rounded-3xl bg-[color:var(--color-secondary)] p-8 text-black">
+<section class="px-6 py-20 sm:px-10 md:px-14 lg:px-20 lg:py-30">
+    <div class="grid w-full grid-cols-1 justify-center justify-items-center gap-6 md:grid-cols-2 xl:grid-cols-3 md:gap-8">
+        <article class="flex min-h-96 w-full max-w-[26rem] flex-col rounded-3xl bg-[color:var(--color-secondary)] p-8 text-black">
             <?php if ($left_title) : ?>
                 <h3 class="text-h3 text-black"><?php echo esc_html($left_title); ?></h3>
             <?php endif; ?>
@@ -56,7 +56,7 @@ $right_bg_url       = $right_bg_image['url'] ?? '';
             <?php endif; ?>
         </article>
 
-        <article class="flex min-h-96 w-full max-w-md flex-col rounded-3xl bg-black p-8 text-white">
+        <article class="flex min-h-96 w-full max-w-[26rem] flex-col rounded-3xl bg-black p-8 text-white">
             <?php if ($middle_title) : ?>
                 <h3 class="text-h3 text-white"><?php echo esc_html($middle_title); ?></h3>
             <?php endif; ?>
@@ -85,7 +85,7 @@ $right_bg_url       = $right_bg_image['url'] ?? '';
         </article>
 
         <article
-            class="flex min-h-96 w-full max-w-md flex-col rounded-3xl bg-black bg-cover bg-center p-8 text-white"
+            class="flex min-h-96 w-full max-w-[26rem] flex-col rounded-3xl bg-black bg-cover bg-center p-8 text-white md:col-span-2 xl:col-span-1"
             <?php if ($right_bg_url) : ?>
                 style="background-image: url('<?php echo esc_url($right_bg_url); ?>');"
             <?php endif; ?>
