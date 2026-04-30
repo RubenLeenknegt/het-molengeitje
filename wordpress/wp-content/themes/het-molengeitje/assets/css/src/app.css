@@ -18,8 +18,9 @@
 
   /* Project colors */
   --color-secondary: #f5b087;
-  --color-secondary-bg: #f2ebe9;
-  --color-tertiary-bg: #f5b087;
+  --color-secondary-bg: #f5b087;
+  --color-tertiary-bg: #f2ebe9;
+  --color-accent-bg: #FDEFE7;
 }
 
 @layer base {

@@ -6,24 +6,24 @@ if (!$cards) {
     return;
 }
 
-$left_title         = $cards['left_card_title'] ?? '';
-$left_description   = $cards['left_card_description'] ?? '';
-$left_button_text   = $cards['left_card_button_text'] ?? '';
-$left_button_link   = $cards['left_card_button_link'] ?? null;
-$left_button_url    = $left_button_link['url'] ?? '';
-$left_button_target = $left_button_link['target'] ?? '';
-$middle_title       = $cards['middle_card_title'] ?? '';
-$middle_description = $cards['middle_card_description'] ?? '';
-$middle_button_text = $cards['middle_card_button_text'] ?? '';
-$middle_button_link = $cards['middle_card_button_link'] ?? null;
-$middle_button_url  = $middle_button_link['url'] ?? '';
-$middle_button_target = $middle_button_link['target'] ?? '';
-$right_button_text  = $cards['right_card_button_text'] ?? '';
-$right_button_link  = $cards['right_card_button_link'] ?? null;
-$right_button_url   = $right_button_link['url'] ?? '';
-$right_button_target = $right_button_link['target'] ?? '';
-$right_bg_image     = $cards['right_card_background_image'] ?? null;
-$right_bg_url       = $right_bg_image['url'] ?? '';
+$left_title             = $cards['left_card_title'] ?? '';
+$left_description       = $cards['left_card_description'] ?? '';
+$left_button_link       = $cards['left_card_button_link'] ?? null;
+$left_button_text       = $left_button_link['title'] ?? '';
+$left_button_url        = $left_button_link['url'] ?? '';
+$left_button_target     = $left_button_link['target'] ?? '';
+$middle_title           = $cards['middle_card_title'] ?? '';
+$middle_description     = $cards['middle_card_description'] ?? '';
+$middle_button_link     = $cards['middle_card_button_link'] ?? null;
+$middle_button_text     = $middle_button_link['title'] ?? '';
+$middle_button_url      = $middle_button_link['url'] ?? '';
+$middle_button_target   = $middle_button_link['target'] ?? '';
+$right_button_link      = $cards['right_card_button_link'] ?? null;
+$right_button_text      = $right_button_link['title'] ?? '';
+$right_button_url       = $right_button_link['url'] ?? '';
+$right_button_target    = $right_button_link['target'] ?? '';
+$right_bg_image         = $cards['right_card_background_image'] ?? null;
+$right_bg_url           = $right_bg_image['url'] ?? '';
 ?>
 
 <section class="px-6 py-20 sm:px-10 md:px-14 lg:px-20 lg:py-30">

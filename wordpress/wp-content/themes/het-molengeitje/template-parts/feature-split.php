@@ -4,8 +4,8 @@ $feature_split = get_field('feature_split');
 
 $title         = $feature_split['title'] ?? '';
 $description   = $feature_split['description'] ?? '';
-$button_text   = $feature_split['button_text'] ?? '';
 $button_link   = $feature_split['button_link'] ?? null;
+$button_text   = $button_link['title'] ?? '';
 $button_url    = $button_link['url'] ?? '';
 $button_target = $button_link['target'] ?? '';
 $image         = $feature_split['image'] ?? null;
@@ -13,7 +13,7 @@ $image_url     = $image['url'] ?? '';
 $image_alt     = $image['alt'] ?? '';
 ?>
 
-<section class="bg-[color:var(--color-secondary-bg)] px-6 py-16 sm:px-10 sm:py-18 md:px-14 md:py-20 lg:px-20 lg:py-20 rounded-4xl">
+<section class="bg-[color:var(--color-tertiary-bg)] px-6 py-16 sm:px-10 sm:py-18 md:px-14 md:py-20 lg:px-20 lg:py-20 rounded-4xl">
     <div class="mx-auto flex w-full max-w-[1440px] flex-col gap-6 lg:flex-row lg:items-stretch lg:gap-5">
         <div class="order-1 w-full lg:order-2 lg:basis-5/12">
             <?php if ($image_url) : ?>

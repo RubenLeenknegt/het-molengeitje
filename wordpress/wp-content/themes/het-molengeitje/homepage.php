@@ -11,4 +11,6 @@ get_template_part('template-parts/cards');
 
 get_template_part('template-parts/feature-split');
 
+get_template_part('template-parts/secondary-feature-split');
+
 get_footer();
