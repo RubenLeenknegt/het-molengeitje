@@ -30,7 +30,7 @@ $right_bg_url       = $right_bg_image['url'] ?? '';
     <div class="grid w-full grid-cols-1 justify-center justify-items-center gap-6 md:grid-cols-2 xl:grid-cols-3 md:gap-8">
         <article class="flex min-h-96 w-full max-w-[26rem] flex-col rounded-3xl bg-[color:var(--color-secondary)] p-8 text-black">
             <?php if ($left_title) : ?>
-                <h3 class="text-h3 text-black"><?php echo esc_html($left_title); ?></h3>
+                <h3 class="text-h3 text-black [&_span]:text-white"><?php echo $left_title ?></h3>
             <?php endif; ?>
 
             <?php if ($left_description) : ?>
