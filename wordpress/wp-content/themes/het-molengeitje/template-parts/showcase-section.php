@@ -34,41 +34,49 @@ $bullets          = array_filter([
         <?php endif; ?>
     >
         <div class="w-full bg-black/40 px-6 py-10 sm:px-10 sm:py-12 md:px-14 md:py-16 lg:px-20 lg:py-20">
-            <div class="mx-auto flex w-full max-w-3xl flex-col items-center text-center text-white">
-                <?php if ($title) : ?>
-                    <h2 class="mb-6 sm:mb-8 md:mb-10 [&_span]:text-(--color-secondary)"><?php echo $title; ?></h2>
-                <?php endif; ?>
+            <div class="mx-auto grid w-full max-w-5xl grid-cols-1 gap-8 text-left text-white lg:grid-cols-[3fr_2fr] lg:gap-40">
+                <div class="flex flex-col">
+                    <?php if ($title) : ?>
+                        <h2 class="mb-6 sm:mb-8 md:mb-10 text-white [&_span]:text-(--color-secondary)"><?php echo $title; ?></h2>
+                    <?php endif; ?>
 
-                <?php if ($description) : ?>
-                    <p class="mb-6 sm:mb-8 md:mb-10 text-white/90"><?php echo esc_html($description); ?></p>
-                <?php endif; ?>
+                    <?php if ($description) : ?>
+                        <p class="mb-6 sm:mb-8 md:mb-10 text-white/90"><?php echo esc_html($description); ?></p>
+                    <?php endif; ?>
 
-                <?php if (!empty($bullets)) : ?>
-                    <ul class="mb-8 flex w-full flex-col gap-3 text-left sm:mb-10 sm:max-w-2xl">
-                        <?php foreach ($bullets as $bullet) : ?>
-                            <li class="flex items-start gap-3">
-                                <span class="mt-1 h-2.5 w-2.5 flex-none rounded-full bg-(--color-secondary)"></span>
-                                <span class="text-white/90"><?php echo esc_html($bullet); ?></span>
-                            </li>
-                        <?php endforeach; ?>
-                    </ul>
-                <?php endif; ?>
+                    <?php if ($button_url) : ?>
+                        <div class="mt-25">
+                            <a
+                                class="btn-primary btn-primary--light"
+                                href="<?php echo esc_url($button_url); ?>"
+                                <?php if ($button_target) : ?>
+                                    target="<?php echo esc_attr($button_target); ?>"
+                                <?php endif; ?>
+                                rel="<?php echo $button_target === '_blank' ? 'noopener noreferrer' : 'noopener'; ?>"
+                            >
+                                <span><?php echo esc_html($button_text); ?></span>
+                                <span class="btn-arrow">
+                                    <?php echo file_get_contents(get_template_directory() . '/assets/media/svg/cta-arrow.svg'); ?>
+                                </span>
+                            </a>
+                        </div>
+                    <?php endif; ?>
+                </div>
 
-                <?php if ($button_text && $button_url) : ?>
-                    <a
-                        class="btn-primary"
-                        href="<?php echo esc_url($button_url); ?>"
-                        <?php if ($button_target) : ?>
-                            target="<?php echo esc_attr($button_target); ?>"
-                        <?php endif; ?>
-                        rel="<?php echo $button_target === '_blank' ? 'noopener noreferrer' : 'noopener'; ?>"
-                    >
-                        <span><?php echo esc_html($button_text); ?></span>
-                        <span class="btn-arrow">
-                            <?php echo file_get_contents(get_template_directory() . '/assets/media/svg/cta-arrow.svg'); ?>
-                        </span>
-                    </a>
-                <?php endif; ?>
+                <div class="flex flex-col">
+                    <?php if (!empty($bullets)) : ?>
+                        <ul class="mt-41 flex w-full flex-col">
+                            <?php foreach ($bullets as $bullet) : ?>
+                                <li class="flex items-start gap-3">
+                                    <span class="mt-0.5 inline-flex h-6 w-6 flex-none items-center justify-center text-white">
+                                        <?php echo file_get_contents(get_template_directory() . '/assets/media/svg/checkmark.svg'); ?>
+                                    </span>
+                                    <span class="text-white/90"><?php echo esc_html($bullet); ?></span>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
+                </div>
             </div>
         </div>
     </div>
