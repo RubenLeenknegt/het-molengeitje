@@ -13,7 +13,7 @@ $image_url     = $image['url'] ?? '';
 $image_alt     = $image['alt'] ?? '';
 ?>
 
-    <section class="px-6 py-16 sm:px-10 sm:py-18 md:px-14 md:py-20 lg:px-20 lg:py-20">
+    <section class="px-6 py-16 sm:px-10 sm:py-18 md:px-14 md:py-20 lg:px-20 lg:py-10">
         <div class="mx-auto flex w-full max-w-[1440px] flex-col gap-6 lg:flex-row lg:items-stretch lg:gap-5">
             <div class="order-1 w-full lg:order-2 lg:basis-5/12">
                 <?php if ($image_url) : ?>
