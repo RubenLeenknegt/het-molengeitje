@@ -14,7 +14,7 @@ $image_alt     = $image['alt'] ?? '';
 ?>
 
 <section class="bg-white px-6 py-16 sm:px-10 sm:py-18 md:px-14 md:py-20 lg:pt-40 lg:p-20 rounded-4xl">
-    <div class="mx-auto flex w-full max-w-[1440px] items-center justify-center py-12 px-25 bg-[color:var(--color-secondary-bg)] rounded-4xl">
+    <div class="mx-auto flex w-full max-w-[1440px] items-center justify-center py-8 px-6 sm:py-12 sm:px-10 md:py-12 md:px-25 bg-[color:var(--color-secondary-bg)] rounded-4xl">
         <div class="flex w-full flex-col gap-6 lg:flex-row lg:items-center lg:gap-5">
 
             <div class="w-full lg:basis-9/20">
@@ -31,7 +31,7 @@ $image_alt     = $image['alt'] ?? '';
             </div>
 
             <div class="w-full lg:basis-11/20">
-                <div class="h-full p-8 sm:p-10 md:py-10 md:ps-10 md:pe-16 lg:py-10 lg:px-10 2xl:ps-48 text-black">
+                <div class="h-full py-8 px-0 sm:py-10 md:pe-16 lg:py-10 lg:px-10 2xl:ps-48 text-black">
                     <?php if ($title) : ?>
                         <h2 class="mb-4 sm:mb-5 md:mb-8 pr-0 sm:pr-6 md:pr-0 text-black [&_span]:text-white"><?php echo $title ?></h2>
                     <?php endif; ?>
