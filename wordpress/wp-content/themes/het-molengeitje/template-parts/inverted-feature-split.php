@@ -13,7 +13,7 @@ $image_url     = $image['url'] ?? '';
 $image_alt     = $image['alt'] ?? '';
 ?>
 
-<section class="bg-white px-6 py-16 sm:px-10 sm:py-18 md:px-14 md:py-20 lg:pt-40 lg:p-20 rounded-4xl">
+<section class="bg-white px-6 py-16 sm:px-10 sm:py-18 md:px-14 md:py-20 lg:pt-40 lg:px-20 lg:pb-10 rounded-4xl">
     <div class="mx-auto flex w-full max-w-[1440px] items-center justify-center py-8 px-6 sm:py-12 sm:px-10 md:py-12 md:px-25 bg-[color:var(--color-secondary-bg)] rounded-4xl">
         <div class="flex w-full flex-col gap-6 lg:flex-row lg:items-center lg:gap-5">
 

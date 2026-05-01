@@ -17,6 +17,8 @@ get_template_part('template-parts/feature-split');
 
 get_template_part('template-parts/inverted-feature-split');
 
+get_template_part('template-parts/showcase-section');
+
 get_template_part('template-parts/secondary-feature-split');
 
 ?>
