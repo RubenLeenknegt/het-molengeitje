@@ -24,7 +24,7 @@ $bullets          = array_filter([
 
 ?>
 
-<section class="bg-white px-6 py-16 sm:px-10 sm:py-18 md:px-14 md:py-20 lg:py-5 lg:px-20 rounded-4xl">
+<section class="bg-white px-4 py-0 sm:px-10 md:px-14 md:py-20 lg:py-4 lg:px-16 xl:py-5 xl:px-20 rounded-4xl">
     <div
         class="mx-auto flex w-full max-w-[1440px] overflow-hidden rounded-4xl bg-cover bg-center"
         <?php if ($bg_url) : ?>
@@ -33,11 +33,11 @@ $bullets          = array_filter([
             aria-label="<?php echo esc_attr($bg_alt); ?>"
         <?php endif; ?>
     >
-        <div class="w-full bg-black/50 px-6 py-10 sm:px-10 sm:py-12 md:px-14 md:py-16 lg:px-30 lg:py-20">
-            <div class="grid w-full max-w-6xl grid-cols-1 gap-8 text-left text-white lg:grid-cols-[3fr_2fr] lg:gap-24">
+        <div class="w-full bg-black/50 px-4 py-8 sm:px-10 sm:py-12 md:px-14 md:py-16 lg:px-20 lg:py-16 xl:px-30 xl:py-20">
+            <div class="grid w-full max-w-6xl grid-cols-1 gap-8 text-left text-white xl:grid-cols-[3fr_2fr] xl:gap-24">
                 <div class="flex flex-col">
                     <?php if ($title) : ?>
-                        <h2 class="mb-6 sm:mb-8 md:mb-15 text-white [&_span]:text-(--color-secondary)"><?php echo $title; ?></h2>
+                        <h2 class="mt-6 mb-6 sm:mb-8 md:mb-15 text-white [&_span]:text-(--color-secondary)"><?php echo $title; ?></h2>
                     <?php endif; ?>
 
                     <?php if ($description) : ?>
@@ -45,7 +45,7 @@ $bullets          = array_filter([
                     <?php endif; ?>
 
                     <?php if ($button_url) : ?>
-                        <div class="mt-25">
+                        <div class="mt-2 xl:mt-25">
                             <a
                                 class="btn-primary btn-primary--light"
                                 href="<?php echo esc_url($button_url); ?>"
@@ -65,13 +65,15 @@ $bullets          = array_filter([
 
                 <div class="flex flex-col">
                     <?php if (!empty($bullets)) : ?>
-                        <ul class="mt-46 flex w-full flex-col">
+                        <ul class="mt-2 xl:mt-46 flex w-full flex-col">
                             <?php foreach ($bullets as $bullet) : ?>
+                                <li class="flex items-start gap-3">
+                                    <span class="mt-0.5 inline-flex h-6 w-6 flex-none items-center justify-center text-white">
                                 <li class="flex items-start gap-3">
                                     <span class="mt-0.5 inline-flex h-6 w-6 flex-none items-center justify-center text-white">
                                         <?php echo file_get_contents(get_template_directory() . '/assets/media/svg/checkmark.svg'); ?>
                                     </span>
-                                    <span class="text-nowrap mb-5 text-white/90"><?php echo esc_html($bullet); ?></span>
+                                    <span class="mb-5 text-white/90 sm:text-nowrap"><?php echo esc_html($bullet); ?></span>
                                 </li>
                             <?php endforeach; ?>
                         </ul>
