@@ -166,4 +166,24 @@
     bottom: 0;
     transform: rotate(-45deg);
   }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-icon {
+    @apply inline-flex h-6 w-6 items-center justify-center;
+  }
+
+  .faq-icon-minus {
+    display: none;
+  }
+
+  .faq-item[open] .faq-icon-minus {
+    display: inline-flex;
+  }
+
+  .faq-item[open] .faq-icon-plus {
+    display: none;
+  }
 }

@@ -21,6 +21,8 @@ get_template_part('template-parts/showcase-section');
 
 get_template_part('template-parts/secondary-feature-split');
 
+get_template_part('template-parts/frequently-asked-questions');
+
 ?>
 </main>
 <?php
