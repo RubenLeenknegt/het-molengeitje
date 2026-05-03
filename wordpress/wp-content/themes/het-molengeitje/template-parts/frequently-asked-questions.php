@@ -41,7 +41,7 @@ $questions = [
 
 ?>
 
-<section class="bg-[color:var(--color-tertiary-bg)] rounded-4xl px-6 py-16 sm:px-10 sm:py-18 md:px-14 md:py-20 lg:px-20 lg:py-20">
+<section class="bg-[color:var(--color-tertiary-bg)] rounded-t-4xl px-6 py-16 sm:px-10 sm:py-18 md:px-14 md:py-20 lg:px-20 lg:py-20">
     <div class="mx-auto w-full max-w-[1440px]">
         <div class="grid grid-cols-1 gap-6 lg:grid-cols-[2fr_3fr] lg:items-stretch">
             <div class="w-full">
