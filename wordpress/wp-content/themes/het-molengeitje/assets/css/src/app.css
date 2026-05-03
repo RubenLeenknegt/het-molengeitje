@@ -21,6 +21,10 @@
   --color-secondary-bg: #f5b087;
   --color-tertiary-bg: #f2ebe9;
   --color-accent-bg: #FDEFE7;
+
+  /* Hero icon animation */
+  --animate-spin-slow: spin-slow 14s linear infinite;
+  --animate-scroll-dot: scroll-dot 1.6s ease-in-out infinite;
 }
 
 @layer base {
@@ -186,4 +190,15 @@
   .faq-item[open] .faq-icon-plus {
     display: none;
   }
+}
+
+/* Hero icon animation */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes scroll-dot {
+  0%, 100% { opacity: 1; transform: translateY(0); }
+  50%       { opacity: 0.3; transform: translateY(6px); }
 }
