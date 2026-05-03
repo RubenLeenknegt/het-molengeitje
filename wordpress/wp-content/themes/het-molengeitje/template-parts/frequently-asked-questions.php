@@ -41,7 +41,7 @@ $questions = [
 
 ?>
 
-<section class="bg-[color:var(--color-tertiary-bg)] rounded-4xl px-6 py-16 sm:px-10 sm:py-18 md:px-14 md:py-20 lg:px-20 lg:py-20">
+<section class="bg-[color:var(--color-tertiary-bg)] rounded-t-4xl px-6 py-16 sm:px-10 sm:py-18 md:px-14 md:py-20 lg:px-20 lg:py-20">
     <div class="mx-auto w-full max-w-[1440px]">
         <div class="grid grid-cols-1 gap-6 lg:grid-cols-[2fr_3fr] lg:items-stretch">
             <div class="w-full">
@@ -80,16 +80,16 @@ $questions = [
                 <div class="h-full w-full rounded-3xl bg-white p-6 sm:p-8 md:p-15">
                     <div class="flex flex-col">
                         <?php foreach ($questions as $item) : ?>
-                            <details class="faq-item border-b border-black/10 py-5 last:border-b-0">
+                            <details class="faq-item group border-b border-black/10 py-5 last:border-b-0">
                                 <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
                                     <span class="text-lg font-heading text-black">
                                         <?php echo esc_html($item['question']); ?>
                                     </span>
                                     <span class="flex items-center gap-2">
-                                        <span class="faq-icon faq-icon-plus">
+                                        <span class="inline-flex h-6 w-6 items-center justify-center group-open:hidden">
                                             <?php echo file_get_contents(get_template_directory() . '/assets/media/svg/add.svg'); ?>
                                         </span>
-                                        <span class="faq-icon faq-icon-minus">
+                                        <span class="hidden h-6 w-6 items-center justify-center group-open:inline-flex">
                                             <?php echo file_get_contents(get_template_directory() . '/assets/media/svg/remove.svg'); ?>
                                         </span>
                                     </span>

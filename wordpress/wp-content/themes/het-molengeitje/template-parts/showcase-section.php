@@ -65,10 +65,8 @@ $bullets          = array_filter([
 
                 <div class="flex flex-col">
                     <?php if (!empty($bullets)) : ?>
-                        <ul class="mt-2 xl:mt-46 flex w-full flex-col">
+                        <ul class="mt-2 xl:mt-52 flex w-full flex-col">
                             <?php foreach ($bullets as $bullet) : ?>
-                                <li class="flex items-start gap-3">
-                                    <span class="mt-0.5 inline-flex h-6 w-6 flex-none items-center justify-center text-white">
                                 <li class="flex items-start gap-3">
                                     <span class="mt-0.5 inline-flex h-6 w-6 flex-none items-center justify-center text-white">
                                         <?php echo file_get_contents(get_template_directory() . '/assets/media/svg/checkmark.svg'); ?>
