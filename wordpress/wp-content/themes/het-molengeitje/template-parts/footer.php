@@ -10,8 +10,8 @@ $cta_arrow_svg      = get_template_directory() . '/assets/media/svg/cta-arrow.sv
 
     <div class="relative z-10 mx-auto flex min-h-screen w-full max-w-[1440px] flex-col px-6 py-16 sm:px-10 md:px-14 lg:px-20 lg:pt-52">
         <div class="flex flex-1 flex-col gap-10 lg:flex-row lg:gap-16">
-            <div class="flex w-full flex-col gap-8 lg:w-1/2">
-                <h1 class="font-heading text-white">Beleef de boerderijpret bij Het Molengeitje</h1>
+            <div class="flex w-full min-w-0 flex-col gap-8 lg:w-1/2">
+                <h1 class="max-w-full break-words font-heading text-white">Beleef de boerderijpret bij Het Molengeitje</h1>
 
                 <div class="flex flex-col gap-8 sm:flex-row lg:pt-14 sm:gap-16">
                     <div>
@@ -46,9 +46,9 @@ $cta_arrow_svg      = get_template_directory() . '/assets/media/svg/cta-arrow.sv
                 </div>
             </div>
 
-            <div class="flex w-96 flex-col gap-6">
+            <div class="flex w-full max-w-full flex-col gap-6 sm:w-96">
                 <div class="flex flex-col rounded-3xl bg-white p-8 text-black">
-                    <h3 class=text-black">Contact</h3>
+                    <h3 class="text-black">Contact</h3>
                     <div class="mt-6">
                         <a class="btn-primary" href="/contact">
                             <span class="btn-arrow">
@@ -89,4 +89,3 @@ $cta_arrow_svg      = get_template_directory() . '/assets/media/svg/cta-arrow.sv
 
 
 </footer>
-

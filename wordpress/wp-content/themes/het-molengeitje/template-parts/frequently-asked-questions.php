@@ -80,16 +80,16 @@ $questions = [
                 <div class="h-full w-full rounded-3xl bg-white p-6 sm:p-8 md:p-15">
                     <div class="flex flex-col">
                         <?php foreach ($questions as $item) : ?>
-                            <details class="faq-item border-b border-black/10 py-5 last:border-b-0">
-                                <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+                            <details class="faq-item group border-b border-black/10 py-5 last:border-b-0">
+                                <summary class="flex cursor-pointer list-none items-center justify-between gap-4 [&::-webkit-details-marker]:hidden">
                                     <span class="text-lg font-heading text-black">
                                         <?php echo esc_html($item['question']); ?>
                                     </span>
                                     <span class="flex items-center gap-2">
-                                        <span class="faq-icon faq-icon-plus">
+                                        <span class="inline-flex h-6 w-6 items-center justify-center group-open:hidden">
                                             <?php echo file_get_contents(get_template_directory() . '/assets/media/svg/add.svg'); ?>
                                         </span>
-                                        <span class="faq-icon faq-icon-minus">
+                                        <span class="hidden h-6 w-6 items-center justify-center group-open:inline-flex">
                                             <?php echo file_get_contents(get_template_directory() . '/assets/media/svg/remove.svg'); ?>
                                         </span>
                                     </span>
