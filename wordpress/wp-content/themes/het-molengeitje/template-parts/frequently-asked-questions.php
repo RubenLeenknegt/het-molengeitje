@@ -81,7 +81,7 @@ $questions = [
                     <div class="flex flex-col">
                         <?php foreach ($questions as $item) : ?>
                             <details class="faq-item group border-b border-black/10 py-5 last:border-b-0">
-                                <summary class="flex cursor-pointer list-none items-center justify-between gap-4 [&::-webkit-details-marker]:hidden">
+                                <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
                                     <span class="text-lg font-heading text-black">
                                         <?php echo esc_html($item['question']); ?>
                                     </span>
