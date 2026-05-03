@@ -11,7 +11,9 @@ add_action('after_setup_theme', function () {
 
     // Registers primary navigation menu
     register_nav_menus([
-        'primary' => __('Primary Navigation', 'het-molengeitje'),
+        'primary'     => __('Primary Navigation', 'het-molengeitje'),
+        'footer_left' => __('Footer Left Navigation', 'het-molengeitje'),
+        'footer_right' => __('Footer Right Navigation', 'het-molengeitje'),
     ]);
 });
 
@@ -26,6 +28,7 @@ add_filter('upload_mimes', 'allow_svg_uploads');
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('theme-style', get_template_directory_uri() . '/assets/css/dist/app.css', [], '1.0');
     wp_enqueue_script('theme-dropdown', get_template_directory_uri() . '/assets/js/header-dropdown.js', [], '1.0', true);
+    wp_enqueue_style('dashicons');
 });
 
 // Force AFC to sync custom fields JSON output file to the /acf-json directory

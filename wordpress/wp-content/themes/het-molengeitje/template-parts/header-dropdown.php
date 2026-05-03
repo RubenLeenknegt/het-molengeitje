@@ -7,7 +7,7 @@ $primary_menu_exists = has_nav_menu('primary');
     class="dropdown-panel absolute left-0 top-full w-full rounded-b-3xl bg-white"
     data-dropdown-panel
 >
-    <div class="mx-auto grid w-full max-w-[1440px] gap-8 px-6 py-8 sm:px-10 md:grid-cols-[minmax(0,1fr)_320px] md:px-14 md:pb-18 lg:px-20">
+    <div class="mx-auto grid w-full max-w-[1440px] gap-8 px-6 py-8 sm:px-10 md:grid-cols-[minmax(0,1fr)_320px] md:px-14 md:pb-18 lg:px-8">
         <div class="pt-8">
             <?php if ($primary_menu_exists) : ?>
                 <?php

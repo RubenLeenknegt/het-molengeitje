@@ -26,11 +26,7 @@ $hero_icon_url    = get_theme_file_uri('/assets/media/svg/hero-icon.svg');
             </div>
 
             <div class="hidden md:block shrink-0 self-end">
-                <img
-                    src="<?php echo esc_url($hero_icon_url); ?>"
-                    alt=""
-                    class="h-auto w-28 lg:w-36"
-                >
+                <?php get_template_part('template-parts/hero-icon'); ?>
             </div>
         </div>
     </div>
